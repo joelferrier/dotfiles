@@ -18,7 +18,8 @@ fi
 # i3 window manager config
 
 if [ ! -f ~/.i3/config ]; then
-    cp ~/.dotfiles/background.jpg ~/fehbg;
+    cp ~/.dotfiles/background.jpg ~/.background;
+    cp ~/.dotfiles/feh.sh ~/.feh.sh;
     mkdir ~/.i3;
     cp ~/.dotfiles/i3config ~/.i3/config
     cp ~/.dotfiles/i3status.conf ~/.i3status.conf

@@ -133,12 +133,9 @@ function pyenv()
 
 }
 
-alias lock="i3lock -c 073642"
+alias lock="xscreensaver-command -lock"
 alias mute="amixer set Master toggle > /dev/null"
 
-alias sshtun="sshuttle --dns -vvr root@support.osfashland.org 0/0"
-
-alias linode='ssh user@45.56.123.132'
 . ~/.private_bash
 . ~/.bash_prompt
 
