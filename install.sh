@@ -45,6 +45,8 @@ fi
 if [ ! -f ~/.vimrc ]; then
     cp ~/.dotfiles/vimrc ~/.vimrc;
     vim +PluginInstall +qall;
+    cd ~/.vim/bundle/YouCompleteMe;
+    ./install.sh --clang-completer;
     echo "colorscheme solarized" >> ~/.vimrc;
 fi
 
