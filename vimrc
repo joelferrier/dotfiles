@@ -122,6 +122,9 @@ augroup Executable
 au BufWritePost * call MakeExecutable()
 augroup END
 
+au BufRead,BufNewFile *.scala
+  \ set filetype=scala noexpandtab
+
 function! MakeExecutable()
   if getline(1)=~"^#!.*/bin/"
     silent !chmod a+x <afile>
