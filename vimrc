@@ -99,8 +99,10 @@ let g:tcomment#replacements_xml={}
 " Text wrap simpler, then type the open tag or ',"
 vmap <C-w> S
 " " Tabs
-let g:airline_theme='badwolf'
+let g:airline_theme='murmur'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+set laststatus=2
 nnoremap <C-b>  :tabprevious<CR>
 inoremap <C-b>  <Esc>:tabprevious<CR>i
 nnoremap <C-n>  :tabnext<CR>

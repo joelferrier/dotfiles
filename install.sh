@@ -37,8 +37,12 @@ if [ ! -d ~/.vim ]; then
     touch ~/.vim/shortcuts.vim;
 fi
 
+# setup powerline fonts
 # download Vundle files
 if [ ! -d ~/.vim/bundle ]; then
+    git clone git@github.com:powerline/fonts.git ~/.powerline_fonts
+    . ~/.powerline_fonts/install.sh
+    sudo -E fc-cache -vf ~/.fonts/
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
 fi
 # copy preconfigured vimrc
