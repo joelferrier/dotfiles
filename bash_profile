@@ -76,8 +76,8 @@ function bcc()
 #TODO: rename
 function pyenv()
 {
-    USAGE="usage: pyenv [new|activate|deactivate] <environment>
-    activate:   activates a virtualenv with the name <environment>
+    USAGE="usage: pyenv [new|use|deactivate] <environment>
+    use:        uses a virtualenv with the name <environment>
     deactivate: deactivates the current virtualenv
     list:       lists availible virtualenvs
     new:        creates a new virtualenv with the name <environment>"
@@ -105,7 +105,7 @@ function pyenv()
             echo "${USAGE}";
         fi
     else
-        if [ "${1}" == "activate" ]; then
+        if [ "${1}" == "use" ]; then
             if [ -d ~/pyenv/${2} ]; then
                 if [ "${INVENV}" == "1" ]; then
                     deactivate;
